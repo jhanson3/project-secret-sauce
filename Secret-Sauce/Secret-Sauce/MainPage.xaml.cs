@@ -26,5 +26,26 @@ namespace Secret_Sauce
         {
             this.InitializeComponent();
         }
+
+        private void RadioButtonPaneItem_Click(object sender, RoutedEventArgs Tag)
+        {
+            var radioButton = sender as RadioButton;
+
+            if (radioButton != null)
+            {
+                switch (radioButton.Tag.ToString())
+                {
+                    case "Map":
+                        MainFrame.Navigate(typeof(MapPage));
+                        break;
+                }
+                MySplitView.IsPaneOpen = false;
+            }
+        }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.MySplitView.IsPaneOpen = this.MySplitView.IsPaneOpen ? false : true;
+        }
     }
 }

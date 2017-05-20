@@ -5,4 +5,17 @@
     xmlns:local="using:Secret_Sauce"
     RequestedTheme="Light">
 
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="RadioButton">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <ContentPresenter Margin="15" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
